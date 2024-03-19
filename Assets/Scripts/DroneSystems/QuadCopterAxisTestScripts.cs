@@ -16,7 +16,7 @@ public class QuadCopterAxisTestScripts : MonoBehaviour
             return;
 
         // Перемещаем персонажа к текущей путевой точке
-        Vector3 targetPosition = new Vector3(waypoints[waypointIndex].position.x, 5f, waypoints[waypointIndex].position.z);
+        Vector3 targetPosition = new Vector3(waypoints[waypointIndex].position.x, 3f, waypoints[waypointIndex].position.z);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
         // Проверяем, достиг ли персонаж текущей путевой точки
