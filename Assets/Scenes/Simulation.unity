@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.4613238, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFrontWind: 0
-  isCrosswind: 1
+  isCrosswind: 0
   isBackWind: 0
   _windForce: 1.21
   wind: 0
@@ -801,7 +801,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0013522865, y: -0.9145415, z: 0.4044788, w: 0.0030008843}
-  m_LocalPosition: {x: -0.021107677, y: 11.841339, z: 10.617797}
+  m_LocalPosition: {x: -1.86, y: 8.85, z: 3.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -858,7 +858,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038793007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000012851}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -867,8 +867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.0000305, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 2.5, y: 0}
+  m_SizeDelta: {x: -5.0001, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1088356798
 GameObject:
@@ -1041,7 +1041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 490.72}
+  m_AnchoredPosition: {x: 0, y: 490.72}
   m_SizeDelta: {x: 360.94, y: 98.555}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333089497
@@ -1064,9 +1064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fuels
-
-'
+  m_text: "\u0417\u0430\u0440\u044F\u0434"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1594,6 +1592,8 @@ MonoBehaviour:
   - {fileID: 1494459779}
   - {fileID: 335410016}
   moveSpeed: 3
+  endWaipoint: {fileID: 1222304810}
+  _battery: {fileID: 7637776704284954760}
 --- !u!114 &7637776704284954760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,6 +1608,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxBatteryTank: 1488
   _batteryTank: 1422
+  _chargeConsumption: 0
+  isTankEmpty: 0
+  refillingTank: 0
   _slider: {fileID: 1869771289}
   _textBattery: {fileID: 1333089497}
   _sideSystems: {fileID: 0}

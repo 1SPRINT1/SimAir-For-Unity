@@ -50,10 +50,10 @@ public class BatterySystem : MonoBehaviour
         // Расчет расхода заряда
         if (isTankEmpty == false)
         {
-            if (_sideSystems.isCrosswind == true || _sideSystems.isBackWind == true || _sideSystems.isFrontWind == true)
-            {
+           // if (_sideSystems.isCrosswind == true || _sideSystems.isBackWind == true || _sideSystems.isFrontWind == true)
+         //   {
                 _batteryTank -= (_chargeConsumption * Time.deltaTime) * 20f;
-            }
+          //  }
         }
             
 

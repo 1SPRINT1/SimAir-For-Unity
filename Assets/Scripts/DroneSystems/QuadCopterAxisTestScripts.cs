@@ -63,7 +63,14 @@ public class QuadCopterAxisTestScripts : MonoBehaviour
 
         if (transform.position == endWaipoint.transform.position)
         {
-            _battery.ReffilingDroneTank();
+            StartCoroutine(UpFuel());
         }
     }
+
+    IEnumerator UpFuel()
+    {
+        yield return new WaitForSeconds(3f);
+        _battery.ReffilingDroneTank();
+        yield break;
+    } 
 }
