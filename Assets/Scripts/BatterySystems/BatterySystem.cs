@@ -33,6 +33,11 @@ public class BatterySystem : MonoBehaviour
         } 
     }
 
+    private void Awake()
+    {
+        _maxBatteryTank = PlayerPrefs.GetFloat("Fuels");
+    }
+
     private void Start()
     {
         _slider.maxValue = _maxBatteryTank;
