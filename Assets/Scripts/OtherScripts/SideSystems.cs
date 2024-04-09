@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using TMPro;
 using UnityEngine;
 
