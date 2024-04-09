@@ -23,7 +23,7 @@ public class CameraScreenshot : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(1f); // Подождать 2 секунды
+            yield return new WaitForSeconds(1f); // Подождать 1 секунду
 
             // Формируем имя файла с таймстампом
             string timestamp = System.DateTime.Now.ToString("yyyyMMddHHmmssffff");
@@ -50,8 +50,8 @@ public class CameraScreenshot : MonoBehaviour
         // Активируем RenderTexture для чтения пикселей
         RenderTexture.active = renderTexture;
 
-        Texture2D screenshot = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
-        screenshot.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
+        Texture2D screenshot = new Texture2D(512, 512, TextureFormat.RGB24, false);
+        screenshot.ReadPixels(new Rect(0, 0, 512, 512), 0, 0);
         screenshot.Apply();
 
         // Сбрасываем RenderTexture
@@ -71,6 +71,7 @@ public class CameraScreenshot : MonoBehaviour
 
         // Освобождаем ресурсы
         Destroy(screenshot);
+        Destroy(renderTexture); // Освободить временный RenderTexture
 
         Debug.Log("Скриншот сохранен: " + filePath);
     }
