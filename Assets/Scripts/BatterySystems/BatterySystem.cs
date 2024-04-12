@@ -52,13 +52,9 @@ public class BatterySystem : MonoBehaviour
         float batteryPercentent = (_batteryTank / _maxBatteryTank) * 100f;
         _textBattery.text = "Battery: " + "%" +batteryPercentent.ToString("#");
         (_slider.value = _batteryTank).ToString();
-        // Расчет расхода заряда
         if (isTankEmpty == false)
         {
-           // if (_sideSystems.isCrosswind == true || _sideSystems.isBackWind == true || _sideSystems.isFrontWind == true)
-         //   {
-                _batteryTank -= (_chargeConsumption * Time.deltaTime) * 20f;
-          //  }
+            _batteryTank -= (_chargeConsumption * Time.deltaTime) * 20f;
         }
             
 

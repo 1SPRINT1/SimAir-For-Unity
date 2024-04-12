@@ -7,8 +7,7 @@ using System;
 public class ImageLoaderForEditor : MonoBehaviour
 {
     public GameObject targetObject; 
-
-    [MenuItem("Tools/Load Image As Material")]
+    
     public static void LoadImageAndCreateMaterial()
     {
         string path = EditorUtility.OpenFilePanel("Load Image", "", "png,jpg,jpeg");

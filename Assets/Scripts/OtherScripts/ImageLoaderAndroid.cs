@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class ImageLoaderAndroid : MonoBehaviour
 {
-    public Renderer targetRenderer; // Для назначения Renderer через Inspector
+    public Renderer targetRenderer; 
 
     public void PickImageAndLoadMaterial()
     {
-        // Проверяем разрешение на доступ к внешнему хранилищу
         if (NativeFilePicker.IsFilePickerBusy())
             return;
-
-        // Запускаем выбор изображения
+        
         NativeFilePicker.Permission permission = NativeFilePicker.PickFile((path) =>
         {
             if (path != null)
             {
-                // Загрузить изображение
                 Texture2D texture = LoadTextureFromFile(path);
                 if (texture == null)
                 {
                     Debug.LogError("Не удалось загрузить текстуру из файла.");
                     return;
                 }
-
-                // Применяем текстуру к материалу
+                
                 if (targetRenderer != null)
                 {
                     targetRenderer.material.mainTexture = texture;
